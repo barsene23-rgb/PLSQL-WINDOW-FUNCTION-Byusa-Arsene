@@ -14,4 +14,4 @@ this table will help in tracking the products inventories and knowing which prod
 ### *Transaction table*
 this table will will show the transactions that was done by every customer, thus tracking the amount of income the buisiness receives per mounth and tracking the amount of products that leaves the stock and tracking the customer who spent more.
 
-![Database_Schema](transaction_table.png)
+![Database_Schema](transactional_table.png)
