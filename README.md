@@ -10,7 +10,7 @@ PLSQL-Assignment
 - Delivery services industry
 
 ## *Data challenges*
-The A&B_shopping&delivery_services had a problem because they did not have enough data to track how much products were sold and delivered per region,and which product sold best per region mostly in urban areas. The buisiness also had a problem of tracking who there frequent customers were and this lead to the buisiness missing chances to provide special services to clients. The most common problem was that they had less to no data that would help them track the delivery delays in Suburban areas. The buisiness had also a problem in tracking pending orders.
+The A&B_shopping&delivery_services has had a big problem finding a way to manage customers data and reduce duplication and ensure accurate deliveries. They had a problem in recording inventories which led to overselling and miscategorization. Transaction has been an issue that needs a solution as well, since the buisiness do not have a way to to link customers with products a payment, this lead to financial discrepancies and delivery erros
 
 ## *Expected outcome*
 - The development of the database will help the buisiness will help tracks the best sales per region whether its suburban areas or urban areas and therefore knowing whether to stock more or whether to focus more sales on one region so as to boost and maximize sales.
