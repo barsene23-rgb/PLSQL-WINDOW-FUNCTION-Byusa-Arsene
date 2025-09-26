@@ -18,6 +18,12 @@ The A&B_shopping&delivery_services has had a big problem finding a way to manage
 - The database will help in keeping record of the products in stock those reducing the risk of selling out for the buisiness and also helping the customers to know which kind of products are in stock and which one to purchase if needed.
 - The most important outcome we expect is a a smooth running of operation for the buisiness and therefore ensuring customer satisfaction and ensuring that all data are well arranged to avoid mix-ups of data.
 
+# **Success Criteria for A&B_Shopping**
+- *Top 5 products per region/quarter → RANK()*: identifies the best selling product per region and rank them based on which region and product sold more.
+- *Running monthly sales totals → SUM() OVER()*: adds up total sales that was recieved monthly, therefore being able to track revenue generated
+- *Month-over-month growth → LAG()/LEAD()*: compares this month total sales to the month before thus being able to track an increase or decrease in revenue.
+- *Customer quartiles → NTILE(4)*: divide customers into different groups based on how much they spend thus being able to reward the customer who spends more.
+- *3-month moving averages → AVG() OVER()*: calculate the average number of orders over 3months thus being able to predic orders and maintain invetories.
 
 
 
