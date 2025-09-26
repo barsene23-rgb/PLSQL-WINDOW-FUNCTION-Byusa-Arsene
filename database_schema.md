@@ -9,3 +9,9 @@ This customers table will provide an id for each customer and and show there nam
 this table will help in tracking the products inventories and knowing which products is leaving the stock as well as the product category.
 
 ![Database_Schema](products_table.png)
+
+
+### *Transaction table*
+this table will will show the transactions that was done by every customer, thus tracking the amount of income the buisiness receives per mounth and tracking the amount of products that leaves the stock and tracking the customer who spent more.
+
+![Database_Schema](transaction_table.png)
