@@ -1,4 +1,4 @@
 # **Database Schema**
 ## **Tables Design**
-### **Customers table**:
+### *Customers table*:
 ![Database Schema](customers_table.png)
