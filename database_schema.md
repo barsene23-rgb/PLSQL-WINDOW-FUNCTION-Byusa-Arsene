@@ -32,4 +32,4 @@ These are all the products that are in stock at the moment in the buisiness and 
 ### *Transaction table*
 This table shows how each transaction that was performed is linked to every customer and product and each transaction is also assigned a specific id to avoid duplication, and each transaction has a date and amount.
 
-[Database_Schema](transaction_data_entry.png)
+![Database_Schema](transaction_data_entry.png)
