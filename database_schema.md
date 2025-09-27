@@ -33,3 +33,9 @@ These are all the products that are in stock at the moment in the buisiness and 
 This table shows how each transaction that was performed is linked to every customer and product and each transaction is also assigned a specific id to avoid duplication, and each transaction has a date and amount.
 
 ![Database_Schema](transaction_data_entry.png)
+
+
+## **ER Diagram**
+This diagram will illustrate clearly what is the relationship between table and how exactly the cardinality between entities and also will show the foreign key as well as primary key from each table.
+
+![Database_Schema](
