@@ -26,7 +26,7 @@ These are some of the customers that were entered in the database with the regio
 ### *Products table*
 These are all the products that are in stock at the moment in the buisiness and they are all assigned an id so that they can be identified individually and this reduces the data duplication.
 
-![Database_Schema](products_data_enrty.png)
+![Database_Schema](products_data_entry.png)
 
 
 ### *Transaction table*
