@@ -38,4 +38,4 @@ This table shows how each transaction that was performed is linked to every cust
 ## **ER Diagram**
 This diagram will illustrate clearly what is the relationship between table and how exactly the cardinality between entities and also will show the foreign key as well as primary key from each table.
 
-![Database_Schema](
+![Database_Schema](Assign.drawio(3).png)
