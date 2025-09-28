@@ -138,3 +138,19 @@ This query wil track the highest sale per month and then track the highest sale 
 
 ## **Navigation**
 ### *1.Lag()*
+This query shows the total sales of this month and the month before, after rounding up all the sales together the query uses a window function known as lag() for comparision. This can be used to improve sales and for marketing purposes
+
+***queries***
+select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
+round(sum(amount), 2) as monthly_total,
+round(lag(sum(amount)) over(order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')), 2) 
+as previous_month_total
+from transaction
+group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
+order by month;
+
+***output***
+<img width="531" height="407" alt="lag()" src="https://github.com/user-attachments/assets/5dc95bf9-a666-4f48-bcaf-eed126a5f4c4" />
+
+### *2.LEAD()*
+
