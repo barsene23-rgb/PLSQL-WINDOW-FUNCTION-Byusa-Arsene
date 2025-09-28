@@ -180,3 +180,25 @@ order by month;
 
 <img width="650" height="420" alt="lead()" src="https://github.com/user-attachments/assets/4fde7650-0d74-452e-896f-10319fc8d142" />
 
+
+## **Distribution*
+### *1.Nile(4)*
+This query joins customers table and transaction table and then joins customers with there total spending and split them into 4 groups. The query uses a window function known as NTILE() to group them into 4 segment based on how much they have spend. This will help in knowing which customer is to be rewarded with the special offer.
+
+***queries***
+
+select c.customer_id,c.customer_name,
+round(sum(t.amount), 2) as total_spent,
+ntile(4) over (order by sum(t.amount) desc) as customer_segment
+from customers c
+join transaction t on c.customer_id = t.customer_id
+group by c.customer_id, c.customer_name
+order by total_spent desc;
+
+***output***
+
+
+<img width="439" height="366" alt="ntile" src="https://github.com/user-attachments/assets/8905711f-6196-42a7-83fc-b8637fe30167" />
+
+
+### *2.CUME_DIST()*
