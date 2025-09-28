@@ -33,4 +33,4 @@ order by total_revenue desc;
 
 ***output***
 
-
+![Queries](rank().png)
