@@ -106,3 +106,20 @@ order by month;
 ***output***
 
 ![Queries](avg().png)
+
+### *3.MIN()*
+This query will first find the lowest sales for each month and also tracks the lowest sales overall and then after that it will group up all the sales from the transaction table per month and then apply a simple window function called min() that will find the lowest running amount up to each month.
+
+***queries***
+
+select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
+min(amount) as monthly_min,
+min(min(amount)) over (order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')) as running_min
+from transaction
+group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
+order by month;
+
+***output***
+
+<img width="617" height="395" alt="avg()" src="https://github.com/user-attachments/assets/7b9f6611-9df3-4104-9b8b-018e5832b277" />
+
