@@ -54,7 +54,7 @@ order by total_revenue desc;
 ![Query](dense_rank().png)
 
 
-### *Percent_Rank()*
+### *4.Percent_Rank()*
 This query calculates the total revenue per customer by joining the customers table and transaction table. The query groups the data by customer_id and customer_name and then calculate the aggregate of the amount from transaction. Percent_Rank() computes the relative rank of each customer within the revenue distribution (0 to 1), supporting customer segmentation for marketing as per the business problem. The programming language i used to create this database known as oracle, when you use Percent_Rank() it returns decimals between 0 and 1,but i used to_char with fm0.99 to be able to display the result to 2decimal places.
 
 ***query***
@@ -74,7 +74,7 @@ order by total_revenue desc;
 
 
 ## **Aggregate**
-### *Sum()*
+### *1.Sum()*
 This query adds up all sales from each month and show how sales are standing so far at the end of every month. The query rounds up all the sales per month and uses a simple way to calculate it using a window funtion sum() and then add all sales up to each month. This will help in controlling sales growth for marketing and productivity purposes.
 
 ***query***
@@ -89,3 +89,19 @@ order by month;
 ***output***
 
 ![Queries](sum().png)
+
+
+### *2.AVG()*
+This query finds the average of sales per month so far and shows it, and then groups all the sales per month from the transaction table. These sales will be used to calculate the average of sales up to each month using a very simple window function known as sum(). This will help in controlling the growth of sales thus plannning ahead of the market.
+
+***queries***
+
+select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
+round(avg(amount), 2) as monthly_avg,
+round(avg(avg(amount)) over (order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')), 2) as running_avg
+from transaction
+group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
+order by month;
+
+***output***
+
