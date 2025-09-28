@@ -70,3 +70,8 @@ order by total_revenue desc;
 
 
 ![Querie](p_rank().png)
+
+
+
+## **Aggregate**
+### *Sum()*
