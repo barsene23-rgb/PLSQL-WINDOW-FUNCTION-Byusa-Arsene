@@ -10,6 +10,7 @@ FROM Customers C
 join Transaction T ON C.Customer_id = T.Customer_id
 group by C.customer_id, C.Customer_name
 order by Total_Revenue desc;
+
 ***output***
 
 ![Queries](row_num.png)
