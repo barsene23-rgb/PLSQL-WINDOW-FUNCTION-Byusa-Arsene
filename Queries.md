@@ -19,3 +19,18 @@ order by Total_Revenue desc;
 
 ### *Rank()*
 This query calculates the total revenue per customer by joining the customers table and the transaction table. This query groups the data by customer_id and customer_name then aggregate the amount from transactions. Rank() assigns a rank to each customer based on total revenue in descending order, with ties receiving the same rank. The result helps identify top customers that spend a lot and therefore being able to provide special offers.
+
+
+***query***
+
+SELECT C.customer_id,C.customer_name,
+sum(T.amount) as Total_revenue,
+rank() over (order by sum(T.amount) desc)as rank_value
+FROM customers C 
+join transaction T on C.customer_id = T.customer_id
+group by C.customer_id, C.customer_name
+order by total_revenue desc;
+
+***output***
+
+
