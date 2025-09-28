@@ -105,3 +105,4 @@ order by month;
 
 ***output***
 
+![Queries](avg().png)
