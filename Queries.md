@@ -5,6 +5,8 @@ This query calculates the total revenue per customer by joining the customers ta
  
  ***query***
 
+
+
 SELECT C.customer_ID,C.customer_NAME,
 sum(T.Amount) AS Total_Revenue,
 row_number() over(order by sum(T.Amount) desc) AS Row_Num
@@ -12,6 +14,7 @@ FROM Customers C
 join Transaction T ON C.Customer_id = T.Customer_id
 group by C.customer_id, C.Customer_name
 order by Total_Revenue desc;
+
 
 ***output***
 
@@ -141,6 +144,8 @@ This query wil track the highest sale per month and then track the highest sale 
 This query shows the total sales of this month and the month before, after rounding up all the sales together the query uses a window function known as lag() for comparision. This can be used to improve sales and for marketing purposes
 
 ***queries***
+
+
 select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
 round(sum(amount), 2) as monthly_total,
 round(lag(sum(amount)) over(order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')), 2) 
@@ -150,6 +155,8 @@ group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
 order by month;
 
 ***output***
+
+
 <img width="531" height="407" alt="lag()" src="https://github.com/user-attachments/assets/5dc95bf9-a666-4f48-bcaf-eed126a5f4c4" />
 
 ### *2.LEAD()*
