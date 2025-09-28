@@ -202,3 +202,21 @@ order by total_spent desc;
 
 
 ### *2.CUME_DIST()*
+This query shows each customer's spendings and how they rank in percentage based on how much they spend. This is done by firstly joining the customers table and the transaction table so as to get the customer and the amount they spend. The query then applies the window function known as cume_dist() to show what percentage of customer spend less or more or even what percent of customer spend the same. The information derrived from this can be used to know which customer are eligible for the special offer.
+
+
+***queries***
+
+select c.customer_id,c.customer_name,
+round(sum(t.amount), 2) as total_spent,
+to_char(round(cume_dist() over (order by sum(t.amount) desc) * 100, 2), 'fm990.00') || '%' as spending_percentile
+from customers c
+join transaction t on c.customer_id = t.customer_id
+group by c.customer_id, c.customer_name
+order by total_spent desc;
+
+
+***output***
+
+
+<img width="634" height="361" alt="cum()" src="https://github.com/user-attachments/assets/a908c11d-756d-4104-a8a1-b80efef800f9" />
