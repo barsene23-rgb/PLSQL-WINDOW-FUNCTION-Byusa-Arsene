@@ -41,4 +41,14 @@ This query calculates the total revenue per customer by joining the customers ta
 
 ***query***
 
+SELECT C.customer_id,C.customer_name,
+sum(T.amount)as total_revenue,
+dense_rank() OVER (order by sum(T.amount) desc)as D_rank_value
+from customers C
+join transaction T on C.customer_id = T.customer_id
+group by C.customer_id, C.customer_name
+order by total_revenue desc;
 
+***0utput***
+
+![Query](dense_rank().png)
