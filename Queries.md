@@ -108,7 +108,7 @@ order by month;
 ![Queries](avg().png)
 
 ### *3.MIN()*
-This query will first find the lowest sales for each month and also tracks the lowest sales overall and then after that it will group up all the sales from the transaction table per month and then apply a simple window function called min() that will find the lowest running amount up to each month.
+This query will first find the lowest sales per month and also tracks the lowest sales overall so far and then after that it will group up all the sales from the transaction table per month and then apply a simple window function called min() that will find the lowest running amount up to each month.
 
 ***queries***
 
@@ -123,3 +123,18 @@ order by month;
 
 <img width="617" height="395" alt="avg()" src="https://github.com/user-attachments/assets/7b9f6611-9df3-4104-9b8b-018e5832b277" />
 
+
+### *4.MAX()*
+This query wil track the highest sale per month and then track the highest sale overall so far. The query will group them per month and use a window function known as max() to calculate the highest running amount up to each month.
+
+***queries***
+
+
+***output***
+
+
+<img width="563" height="423" alt="max()" src="https://github.com/user-attachments/assets/a568a626-85c0-43e1-9c85-34bf0e1b26fd" />
+
+
+## **Navigation**
+### *1.Lag()*
