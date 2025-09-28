@@ -86,4 +86,4 @@ from transaction
 group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
 order by month;
 
-
+![Queries](sum().png)
