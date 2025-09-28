@@ -34,3 +34,7 @@ order by total_revenue desc;
 ***output***
 
 ![Queries](rank().png)
+
+
+### *3.Dense_Rank()*
+This query calculates the total revenue per customer by joining the CUSTOMERS and TRANSACTIONS tables. It groups the data by CUSTOMER_ID and CUSTOMER_NAME to aggregate the AMOUNT from transactions. DENSE_RANK() assigns a rank to each customer based on total revenue in descending order, with ties receiving the same rank and no gaps in the sequence. The result supports identifying top customers for targeted marketing, as outlined in the business problem.
