@@ -75,3 +75,15 @@ order by total_revenue desc;
 
 ## **Aggregate**
 ### *Sum()*
+This query adds up all sales from each month and show how sales are standing so far at the end of every month. The query rounds up all the sales per month and uses a simple way to calculate it using a window funtion sum() and then add all sales up to each month. This will help in controlling sales growth for marketing and productivity purposes.
+
+***query***
+
+select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
+sum(amount) as monthly_total,
+sum(sum(amount)) over (order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')) as running_total
+from transaction
+group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
+order by month;
+
+
