@@ -160,4 +160,23 @@ order by month;
 <img width="531" height="407" alt="lag()" src="https://github.com/user-attachments/assets/5dc95bf9-a666-4f48-bcaf-eed126a5f4c4" />
 
 ### *2.LEAD()*
+This query shows the monthly sales and monthly sales of the next month. This query rounda up all sales per month and uses a window function Lead() to calculate a prediction for the next month sales.This can help in predicting the market change and for making an appropriate buisiness plan.
+
+
+***queries***
+
+
+select to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm') as month,
+round(sum(amount), 2) as monthly_total,
+round(lead(sum(amount)) over (order by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')), 2) as next_month_total
+from transaction
+group by to_char(to_date(sale_date, 'yyyy-mm-dd'), 'yyyy-mm')
+order by month;
+
+
+
+***output***
+
+
+<img width="650" height="420" alt="lead()" src="https://github.com/user-attachments/assets/4fde7650-0d74-452e-896f-10319fc8d142" />
 
