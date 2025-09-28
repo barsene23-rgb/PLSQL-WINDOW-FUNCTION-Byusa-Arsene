@@ -52,3 +52,20 @@ order by total_revenue desc;
 ***0utput***
 
 ![Query](dense_rank().png)
+
+
+### *Percent_Rank()*
+This query calculates the total revenue per customer by joining the customers table and transaction table. The query groups the data by customer_id and customer_name and then calculate the aggregate of the amount from transaction. Percent_Rank() computes the relative rank of each customer within the revenue distribution (0 to 1), supporting customer segmentation for marketing as per the business problem. The programming language i used to create this database known as oracle, when you use Percent_Rank() it returns decimals between 0 and 1,but i used to_char with fm0.99 to be able to display the result to 2decimal places.
+
+***query***
+
+select C.customer_id,C.customer_name,
+sum(T.amount) as total_revenue,
+to_char(percent_rank() over (order by sum(T.amount)desc), 'FM0.99') || '%' as P_rank_value 
+from customers C
+join transaction T ON C.customer_id = T.customer_id
+group by C.customer_id,C.customer_name
+order by total_revenue desc;
+
+
+
