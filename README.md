@@ -38,3 +38,5 @@ The A&B_shopping&delivery_services has had a big problem finding a way to manage
 - https://www.youtube.com/watch?v=a9u2yZvsqHA
 - https://www.youtube.com/watch?v=cE3sCuL4L6c&list=PLX6xdk86h_0xpW82Q0YkdN6xpHa6hvHjO&index=6
 
+# **Integrity Statement**
+I ***Byusa Arsene***, confirm that this work was done by me and that nothing from this work was AI genereated or copied from a classmate. The codes and all the screeshots and every single word that comprises my work was done by me based on my understanding of the assignment so as to meet the requirements. 
