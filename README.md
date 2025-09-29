@@ -26,7 +26,15 @@ The A&B_shopping&delivery_services has had a big problem finding a way to manage
 - *3-month moving averages → AVG() OVER()*: calculate the average number of orders over 3months thus being able to predic orders and maintain invetories.
 
 
-
-
-
+# **References**
+- https://www.sqltutorial.org/sql-window-functions/
+- https://www.geeksforgeeks.org/sql/window-functions-in-sql/
+- https://www.youtube.com/watch?v=a9u2yZvsqHA
+- https://stackoverflow.com/questions/65311362/how-to-deal-with-sql-database-in-github
+- https://www.sqlservertutorial.net/sql-server-window-functions/sql-server-ntile-function/
+- https://www.sqltutorial.org/sql-window-functions/sql-cume_dist/
+- https://www.sqltutorial.org/sql-window-functions/sql-lag/
+- https://www.sqltutorial.org/sql-window-functions/sql-lead/
+- https://www.youtube.com/watch?v=a9u2yZvsqHA
+- https://www.youtube.com/watch?v=cE3sCuL4L6c&list=PLX6xdk86h_0xpW82Q0YkdN6xpHa6hvHjO&index=6
 
